@@ -1,0 +1,111 @@
+/* Estilo para el sidebar */
+.sidebar {
+    height: 100%;
+    width: 290px; /* Ancho del sidebar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0d0f0e;
+    padding-top: 20px; /* Espacio adicional desde la parte superior */
+    padding-bottom: 20px; /* Opcional: espacio en la parte inferior */
+    transition: 0.3s;
+    overflow-y: auto;
+    z-index: 999;
+    display: none; /* Ocultar por defecto */
+}
+
+/* Estilo para los enlaces en el sidebar */
+.sidebar a {
+    padding: 12px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    width: 100%; /* Asegúrate de que ocupen todo el ancho */
+}
+
+/* Efecto hover para los enlaces */
+.sidebar a:hover {
+    background-color: #575757;
+}
+
+/* Estilo para el contenedor oculto de los subítems (dropdown) */
+.dropdown-container {
+    display: none; /* Ocultar por defecto */
+    background-color: #262626; /* Color de fondo para los subítems */
+    padding-left: 0px; /* Desplazar subítems a la derecha */
+}
+
+/* Estilo para los subítems */
+.dropdown-container a {
+    padding: 10px 15px; /* Mismo tamaño que los elementos del sidebar */
+    font-size: 16px; /* Tamaño de fuente consistente pero un poco más pequeño */
+    color: #f1f1f1; /* Color del texto */
+    padding-left: 80px;
+    transition: 0.3s;
+    width: 100%; /* Asegúrate de que los subítems ocupen todo el ancho */
+}
+
+/* Efecto hover para los subítems */
+.dropdown-container a:hover {
+    background-color: #444; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilo para el botón que tiene subítems (dropdown) */
+.dropdown-btn {
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    padding: 12px 15px; /* Mismo padding que los otros elementos */
+    width: 100%; /* Asegúrate de que el botón también ocupe todo el ancho */
+    text-align: left;
+    cursor: pointer;
+}
+
+.dropdown-btn:hover {
+    background-color: #575757;
+}
+
+/* Estilo para la barra de navegación */
+
+.navbar {
+        position: fixed; /* Mantener fijo */
+        top: 0;
+        left: 0;
+        width: 100%; /* Asegura que ocupe todo el ancho */
+        background-color: white;
+        overflow: hidden;
+        padding: 10px;
+        transition: 0.3s; /* Para la transición suave */
+        z-index: 1000; /* Asegúrate de que esté por encima */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    background-color: #575757;
+    padding: 5px;
+}
+
+.main-content {
+    transition: margin-left 0.3s;
+    margin-left: 0; /* Asegúrate de que empiece desde 0 */
+    padding-top: 50px; /* Ajusta este valor según la altura de tu barra de navegación */
+}
