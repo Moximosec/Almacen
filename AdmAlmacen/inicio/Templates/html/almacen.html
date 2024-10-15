@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Almacén</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">  <!-- Si tienes estilos -->
+</head>
+<body>
+    <h1>Lista de Productos en Almacén</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Descripción</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for producto in productos %}
+                <tr>
+                    <td>{{ producto.descripcion }}</td>
+                    <td>{{ producto.estado }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="2">No hay productos en el almacén.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
